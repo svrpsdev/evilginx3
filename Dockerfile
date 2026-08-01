@@ -2,7 +2,7 @@ FROM golang:1.22-alpine AS builder
 RUN apk add --no-cache git
 WORKDIR /app
 COPY . .
-RUN go build -o evilginx2 .
+RUN go build -mod=mod -o evilginx2 .
 
 FROM alpine:latest
 RUN apk add --no-cache ca-certificates
